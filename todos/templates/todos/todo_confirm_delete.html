@@ -10,10 +10,12 @@
     
     <p>Tem certeza que deseja exluir a tarefa <strong>{{ todo.title }}</strong>?</p>
 
-    <form mathod="POST">
+    <form method="POST">
         {% csrf_token %}
+
+        
         <button type="submit" class="btn btn-danger">Excluir</button>
-        <a href="{% url "todo_list" %}" class="btn btn-primary">Cancelar</a>
+        <a href="{% url 'todo_list' %}" class="btn btn-primary">Cancelar</a>
     </form>
 
 {% endblock content %}
